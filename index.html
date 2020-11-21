@@ -1,23 +1,75 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HearYouGo</title>
+  <link rel="stylesheet" href="style.css">
   <!-- Load the latest version of TensorFlow.js -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+  <script src="index.js"></script>
 </head>
 
 <body>
-  <div id="console"></div>
-  <!-- Add an image that we will use to test -->
+
+  <!-- Add an image that we will use to test
   <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
   <button id="class-a">Add A</button>
   <button id="class-b">Add B</button>
   <button id="class-c">Add C</button>
+  <button id="class-d">Add D</button>
   <button id="class-no-action">Add No Action</button>
   <button id="class-save">Save</button>
-  <!-- Load index.js after the content of the page -->
-  <script src="index.js"></script>
+   Load index.js after the content of the page -->
+
+  <div class="siteTitle">
+    <h1>Welcom to <span class="t1">Hear</span><span class="t2">You</span><span class="t3">Go</span> !</h1>
+  </div>
+  <main>
+    <div class="row">
+      <div class="col">
+        <h3 class="colTitle">Letters</h3>
+        <p class="note"><span class="important">Note</span> : Click letter to add sign to neural network</p>
+        <div class="letterButtons">
+          <button id="class-a" class="letterButton">Add A</button>
+          <button id="class-b" class="letterButton">Add B</button>
+          <button id="class-c" class="letterButton">Add C</button>
+          <button id="class-d" class="letterButton">Add D</button>
+          <button id="class-e" class="letterButton">Add E</button>
+          <button id="class-h" class="letterButton">Add H</button>
+          <button id="class-l" class="letterButton">Add L</button>
+          <button id="class-o" class="letterButton">Add O</button>
+          <!-- <button id="class-save" class="letterButton">Save</button> -->
+        </div>
+      </div>
+      <div class="col">
+        <h3 class="colTitle">Camera</h3>
+        <div id="console"></div>
+        <div class="camera">
+          <video autoplay playsinline muted id="webcam" width="250px" height="250px"></video>
+        </div>
+      </div>
+      <div class="col">
+        <h3 class="colTitle">Actual letter</h3>
+        <div id="outputMessage"></div>
+        <div id="outputChances"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="letterPicture"><img src="./images/a.png"></div>
+      <div class="letterPicture"><img src="./images/b.png"></div>
+      <div class="letterPicture"><img src="./images/c.png"></div>
+      <div class="letterPicture"><img src="./images/d.png"></div>
+      <div class="letterPicture"><img src="./images/e.png"></div>
+      <div class="letterPicture"><img src="./images/h.png"></div>
+      <div class="letterPicture"><img src="./images/l.png"></div>
+      <div class="letterPicture"><img src="./images/o.png"></div>
+    </div>
+  </main>
+  <footer>NoNameTeam (2020 - 2020). &#174All rights reserved.</footer>
 </body>
 
 </html>
